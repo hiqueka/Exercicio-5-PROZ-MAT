@@ -1,0 +1,17 @@
+matriza = [[0,0,0] for _ in range(3)]
+
+#definindo as matrizes
+for l in range(len(matriza)):
+    for c in range(len(matriza)):
+        matriza[l][c] = int(input("Digite um valor para a linha {} coluna {}: ".format(l+1, c+1)))
+
+# encontrando o valor máximo na matriz
+m = max(max(linha) for linha in matriza)
+
+# imprimindo a matriz
+for l in range(len(matriza)):
+    for c in range(len(matriza)):
+        print(f"[{matriza[l][c]}]", end = " ")
+    print()  # para imprimir cada linha em uma nova linha
+
+print(f"O valor máximo na matriz é {m}")
