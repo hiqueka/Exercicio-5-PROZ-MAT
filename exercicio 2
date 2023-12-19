@@ -1,0 +1,18 @@
+matriza = [[0,0,0],[0,0,0],[0,0,0]]
+matrizb = [[0,0,0],[0,0,0],[0,0,0]]
+matrizc = [[0,0,0],[0,0,0],[0,0,0]]
+
+for l in range(0,3):
+    for j in range(0,3):
+        matriza[l][j] = int(input("Digite um valor para A linha {} coluna {}: ".format(l+1, j+1)))
+
+for l in range(0,3):
+    for j in range(0,3):
+         matrizb[l][j] = int(input("Digite um valor para A linha {} coluna {}: ".format(l+1, j+1)))
+
+for l in range(0,3):
+    for j in range(0,3):
+        matrizc[l][j] = matriza[l][j] * matrizb[l][j]
+        print(f"[{matrizc[l][j]}]",end = "")
+    print()
+    
