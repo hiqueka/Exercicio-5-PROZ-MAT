@@ -1,0 +1,21 @@
+def verificar_simetria(matriz):
+    for l in range(len(matriz)):
+        for c in range(len(matriz[l])):
+            if matriz[l][c] != matriz[c][l]:
+                    return False
+    return True
+
+matriz =[[0,0,0] for _ in range(3)]
+
+for l in range(len(matriz)):
+     for c in range(len(matriz[l])):
+          matriz[l][c] = int(input("Digite o valor para linha {} e coluna {}: ".format(l+1,c+1)))
+
+
+ #verificando simetria
+
+if verificar_simetria(matriz):
+     print("A matriz é simetrica em relaçao a sua diagonal principal")
+
+else:
+     print("A matriz não é simetrica")    
